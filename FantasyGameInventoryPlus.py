@@ -2,7 +2,7 @@ inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
 def displayInventory(inv):
-    print('Inventory:')
+    print('Inven')
     itemTotal = 0
     for k, v in inv.items():
         print(str(v) + ' ' + k)
