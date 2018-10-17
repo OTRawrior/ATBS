@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 15 19:06:00 2018
-
-@author: Reece
-"""
-
 spam = ['a', 'b', 'c', 'd']
 
 def listAnd(list):
