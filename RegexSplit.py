@@ -7,10 +7,26 @@ string. """
 
 import re
 
-string = '    some   texty stuff  '
+string = '                  some   texty stuff                 '
 
 
-def regex_split(toSplit):
-    toSplit = 5
+def regex_split(text, junk = '\s*'):
+    if junk == '\s*':
+        junk1 = '^' + junk
+        junk2 = junk + '$'
+    else:
+        junk1 = junk
+        junk2 = junk
+    regex1 = re.compile(junk1)
+    regex2 = re.compile(junk2)
+    text = regex1.sub('', text)
+    text = regex2.sub('', text)
+    return text
 
+string = input('what string')
+remove = input('remove what')
 
+if remove == '':
+    print(regex_split(string))
+else:
+    print(regex_split(string, remove))
